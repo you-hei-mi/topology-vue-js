@@ -1,18 +1,25 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <!-- 使用topology组件 -->
+    <topology />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+// 导入topology-vue组件
+import topology from "topology-vue";
+// 需要导入topology-vue.css
+import "topology-vue/topology-vue.css";
 
 export default {
   name: "Home",
   components: {
-    HelloWorld
-  }
+    topology,
+  },
 };
 </script>
+<style lang="scss">
+.home {
+  height: 100vh;
+}
+</style>
