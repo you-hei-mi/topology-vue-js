@@ -7856,10 +7856,10 @@ toidentifier@1.0.0:
   resolved "https://registry.npm.taobao.org/toidentifier/download/toidentifier-1.0.0.tgz#7e1be3470f1e77948bc43d94a3c8f4d7752ba553"
   integrity sha1-fhvjRw8ed5SLxD2Uo8j013UrpVM=
 
-topology-vue@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.npm.taobao.org/topology-vue/download/topology-vue-0.1.4.tgz#ace966ced454985bee2e86f0b345766276b4d430"
-  integrity sha1-rOlmztRUmFvuLobws0V2Yna01DA=
+topology-vue@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.npm.taobao.org/topology-vue/download/topology-vue-0.1.5.tgz#f49ac85ac5c862567ea057968507810fd8227cdf"
+  integrity sha1-9JrIWsXIYlZ+oFeWhQeBD9gifN8=
 
 toposort@^1.0.0:
   version "1.0.7"
