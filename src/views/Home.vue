@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <!-- 使用topology组件 -->
-    <topology :configs="topologyConfigs" :user="user" />
+    <topology :configs="topologyConfigs" :user="user" @event="onEvent" />
   </div>
 </template>
 
@@ -73,7 +73,22 @@ export default {
           { name: "退出", action: "logout" },
         ],
       },
+      user: {
+        username: "le5le",
+      },
     };
+  },
+  methods: {
+    onEvent(e) {
+      switch (e.name) {
+        case "logout":
+          this.user = null;
+          // Do sth.
+          break;
+        // ...
+        // ...
+      }
+    },
   },
 };
 </script>
