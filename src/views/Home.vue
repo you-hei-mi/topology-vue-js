@@ -1,95 +1,141 @@
 <template>
   <div class="home">
     <!-- 使用topology组件 -->
-    <topology :configs="topologyConfigs" :user="user" @event="onEvent" />
+    <topology
+      :configs="topologyConfigs"
+      :materials="materials"
+      :user="user"
+      @event="onEvent"
+    />
   </div>
 </template>
 
 <script>
 // 导入topology-vue组件
-import topology from "topology-vue";
+import topology from 'topology-vue';
 // 需要导入topology-vue.css
-import "topology-vue/topology-vue.css";
+import 'topology-vue/topology-vue.css';
+
+import { defalutMaterials, userMaterials, images } from './data';
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
-    topology,
+    topology
   },
-  data: function () {
+  data: function() {
     return {
       topologyConfigs: {
+        license: {
+          key: '企业版授权码',
+          value: '国产原创开源发展做出我们的贡献'
+        },
         logo: {
-          img: "http://topology.le5le.com/assets/img/favicon.ico",
-          url: "http://topology.le5le.com",
-          target: "_blank",
+          img: 'http://topology.le5le.com/assets/img/favicon.ico',
+          url: 'http://topology.le5le.com',
+          target: '_blank'
         },
         menus: [
           {
-            name: "文件(自定义菜单1)",
+            name: '文件(自定义菜单1)',
             children: [
-              { name: "新建文件", keyboard: "Ctrl+N", action: "open" },
-              { name: "打开文件", keyboard: "Ctrl+O", action: "loadNew" },
-              { name: "导入文件", keyboard: "Ctrl+I", action: "load" },
+              { name: '新建文件', keyboard: 'Ctrl+N', action: 'open' },
+              { name: '打开文件', keyboard: 'Ctrl+O', action: 'loadNew' },
+              { name: '导入文件', keyboard: 'Ctrl+I', action: 'load' },
               {},
-              { name: "保存", keyboard: "Ctrl+S", action: "save" },
-              { name: "另存为", keyboard: "Ctrl+Shift+I", action: "saveAs" },
-              { name: "下载JSON文件", action: "downloadJson" },
-              { name: "下载zip打包文件", action: "downloadZip" },
+              { name: '保存', keyboard: 'Ctrl+S', action: 'save' },
+              { name: '另存为', keyboard: 'Ctrl+Shift+I', action: 'saveAs' },
+              { name: '下载JSON文件', action: 'downloadJson' },
+              { name: '下载zip打包文件', action: 'downloadZip' },
               {},
-              { name: "导出为HTML", action: "downloadHtml" },
+              { name: '导出为HTML', action: 'downloadHtml' },
               {},
-              { name: "下载为PNG", action: "downloadPng" },
-              { name: "下载为SVG", action: "downloadSvg" },
-            ],
+              { name: '下载为PNG', action: 'downloadPng' },
+              { name: '下载为SVG', action: 'downloadSvg' }
+            ]
           },
           {
-            name: "编辑(自定义菜单2)",
+            name: '编辑(自定义菜单2)',
             children: [
-              { name: "撤销", keyboard: "Ctrl+Z", action: "undo" },
-              { name: "恢复  ", keyboard: "Ctrl+Shift+Z", action: "redo" },
+              { name: '撤销', keyboard: 'Ctrl+Z', action: 'undo' },
+              { name: '恢复  ', keyboard: 'Ctrl+Shift+Z', action: 'redo' },
               {},
-              { name: "剪切  ", keyboard: "Ctrl+X", action: "cut" },
-              { name: "复制  ", keyboard: "Ctrl+C", action: "copy" },
-              { name: "粘贴  ", keyboard: "Ctrl+V", action: "paste" },
-            ],
+              { name: '剪切  ', keyboard: 'Ctrl+X', action: 'cut' },
+              { name: '复制  ', keyboard: 'Ctrl+C', action: 'copy' },
+              { name: '粘贴  ', keyboard: 'Ctrl+V', action: 'paste' }
+            ]
           },
           {
-            name: "我的菜单3",
-            router: "/page",
-          },
+            name: '我的菜单3',
+            router: '/page'
+          }
         ],
-        loginUrl: "https://account.le5le.com",
-        signupUrl: "https://account.le5le.com",
+        loginUrl: 'https://account.le5le.com',
+        signupUrl: 'https://account.le5le.com',
         userMenus: [
-          { name: "个人中心", router: "/user/home" },
+          { name: '个人中心', router: '/user/home' },
           {},
           {
-            name: "账号设置",
-            url: "https://account.le5le.com/user/profile",
-            target: "_blank",
+            name: '账号设置',
+            url: 'https://account.le5le.com/user/profile',
+            target: '_blank'
           },
           {},
-          { name: "退出", action: "logout" },
-        ],
+          { name: '退出', action: 'logout' }
+        ]
       },
       user: {
-        username: "le5le",
+        username: 'le5le'
       },
+      materials: {
+        system: defalutMaterials,
+        user: userMaterials,
+        images,
+        uploadUrl: '/api/file',
+        uploadHeaders: {
+          Authorization: 'your token'
+        },
+        uploadParams: {
+          mydata: 1
+        }
+      }
     };
   },
   methods: {
     onEvent(e) {
       switch (e.name) {
-        case "logout":
+        case 'logout':
           this.user = null;
           // Do sth.
           break;
+
+        case 'openMaterial':
+          // 点击了图标工具栏分组
+          console.log('openMaterial', e.params);
+          // Do sth.
+          break;
+
+        case 'addMaterial':
+          // Do sth. For example:
+          this.$router.push({
+            path: '/',
+            query: { component: '1' }
+          });
+          break;
+
+        case 'editMaterial':
+          // Do sth. For example:
+          this.$router.push({
+            path: '/',
+            query: { id: e.params.id, component: '1' },
+          });
+          break;
+
         // ...
         // ...
       }
-    },
-  },
+    }
+  }
 };
 </script>
 <style lang="scss">
