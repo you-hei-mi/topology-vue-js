@@ -5,6 +5,7 @@
       :configs="topologyConfigs"
       :materials="materials"
       :user="user"
+      :data="data"
       @event="onEvent"
     />
   </div>
@@ -74,8 +75,21 @@ export default {
         uploadParams: {
           mydata: 1
         }
-      }     
+      },
+      data: {}
     };
+  },
+  created: function() {
+    const data = window.topologyData;
+    // 存在缓存数据，预览页返回
+    if (data) {
+      this.data = { data: Object.assign({}, data) };
+      setTimeout(() => {
+        window.topologyData = null;
+      }, 200);
+    } else {
+      // Do sth.
+    }
   },
   methods: {
     onEvent(e) {
@@ -128,6 +142,9 @@ export default {
           break;
         case 'preview':
           // 点击工具栏“预览”
+
+          // 保存当前编辑数据，方便预览时直接打开
+          window.topologyData = window.topology.data;
           this.$router.push({
             path: '/preview',
             query: { id: 'xxx', r: '1' }
