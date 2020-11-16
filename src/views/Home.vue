@@ -80,6 +80,13 @@ export default {
     };
   },
   created: function() {
+     window.registerTools();
+    this.materials.system.push({
+      name: '企业图形库示例',
+      expand: true,
+      show: true,
+      list: window.topologyTools
+    });
     const data = window.topologyData;
     // 存在缓存数据，预览页返回
     if (data) {
