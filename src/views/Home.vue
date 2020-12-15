@@ -81,12 +81,20 @@ export default {
   },
   created: function() {
     window.registerTools();
-    this.materials.system.push({
-      name: '企业图形库示例',
-      expand: true,
-      show: true,
-      list: window.topologyTools
+    const groups = {};
+    window.topologyTools.forEach(o => {
+      groups[o.subClassName] = groups[o.subClassName] || [];
+      groups[o.subClassName].push(o);
     });
+    for (const key in groups) {
+      this.materials.system.push({
+        name: key,
+        expand: true,
+        show: true,
+        list: groups[key]
+      });
+    }
+
     const data = window.topologyData;
     // 存在缓存数据，预览页返回
     if (data) {
