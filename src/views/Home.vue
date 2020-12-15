@@ -80,7 +80,7 @@ export default {
     };
   },
   created: function() {
-     window.registerTools();
+    window.registerTools();
     this.materials.system.push({
       name: '企业图形库示例',
       expand: true,
