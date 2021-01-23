@@ -20,6 +20,9 @@
 
 <script>
 import Topology from 'topology-vue';
+
+
+
 export default {
   name: 'Preview',
   components: {
@@ -33,6 +36,7 @@ export default {
     };
   },
   created() {
+    window.aaaa = '这是一个a'
     const data = window.topologyData;
     if (data) {
       this.locked = data.locked;
@@ -44,6 +48,15 @@ export default {
     } else {
       // Do sth.
     }
+
+    let that = this;
+    window.bbb = function(a,b){
+      console.log('这是一个方法')
+      console.log('这是参数'+a)
+      console.log('这是参数'+b)
+      that.onSizeWindow();
+    }
+
 
     this.showTools = !!this.$route.query.r;
   },
@@ -62,7 +75,7 @@ export default {
       this.$router.go(-1);
     }
   }
-}
+};
 </script>
 <style lang="scss" scoped>
 .preview {

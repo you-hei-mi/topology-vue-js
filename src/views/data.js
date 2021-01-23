@@ -1,6 +1,6 @@
 export const defalutMenus = [
   {
-    name: '文件(自定义菜单1)',
+    name: '文件',
     children: [
       { name: '新建文件', keyboard: 'Ctrl+N', action: 'open' },
       { name: '打开文件', keyboard: 'Ctrl+O', action: 'loadNew' },
@@ -18,7 +18,7 @@ export const defalutMenus = [
     ]
   },
   {
-    name: '编辑(自定义菜单2)',
+    name: '编辑',
     children: [
       { name: '撤销', keyboard: 'Ctrl+Z', action: 'undo' },
       { name: '恢复  ', keyboard: 'Ctrl+Shift+Z', action: 'redo' },
@@ -27,26 +27,54 @@ export const defalutMenus = [
       { name: '复制  ', keyboard: 'Ctrl+C', action: 'copy' },
       { name: '粘贴  ', keyboard: 'Ctrl+V', action: 'paste' }
     ]
-  },
-  {
-    name: '我的菜单3',
-    router: '/page'
   }
 ];
 
 export const defalutUserMenus = [
-  { name: '个人中心', router: '/user/home' },
-  {},
-  {
-    name: '账号设置',
-    url: 'https://account.le5le.com/user/profile',
-    target: '_blank'
-  },
-  {},
+  // { name: '个人中心', router: '/user/home' },
+  // {},
+  // {
+  //   name: '账号设置',
+  //   url: 'https://account.le5le.com/user/profile',
+  //   target: '_blank'
+  // },
+  // {},
   { name: '退出', action: 'logout' }
 ];
 
 export const defalutMaterials = [
+  {
+    iconUrl: '//at.alicdn.com/t/font_2279435_j6q2iojfxqa.css',
+    show: true,
+    list: []
+  },
+  {
+    name: '百度图片',
+    expand: true,
+    show: true,
+    list: [
+      {
+        name: 'rectangle',
+        icon: 't-icon t-rect',
+        id: 1,
+        data: {
+          text: '正方形',
+          rect: {
+            width: 100,
+            height: 100
+          },
+          paddingLeft: 10,
+          paddingRight: 10,
+          paddingTop: 10,
+          paddingBottom: 10,
+          name: 'rectangle',
+          icon: '\ue64d',
+          iconFamily: 'topology',
+          iconColor: '#2f54eb'
+        }
+      }
+    ]
+  },
   {
     name: '基本形状',
     expand: true,
@@ -1014,6 +1042,11 @@ export const defalutMaterials = [
 ];
 
 export const userMaterials = [
+  {
+    name: 'componentData内容为画布数据topology.toComponent函数执行结果',
+    image: 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.zuoyesou.com%2F2015-11%2F19%2F1447889019.jpg&refer=http%3A%2F%2Fimg.zuoyesou.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1613976754&t=38b9835484d66efd1b936c94c0fb39af',
+    componentData: {"type":0,"rect":{"x":210,"y":153,"width":277,"height":106,"center":{"x":348.5,"y":206},"ex":487,"ey":259},"lineWidth":1,"rotate":0,"offsetRotate":0,"globalAlpha":1,"dash":0,"strokeStyle":"transparent","fillStyle":"","font":{"color":"","fontFamily":"\"Hiragino Sans GB\", \"Microsoft YaHei\", \"Helvetica Neue\", Helvetica, Arial","fontSize":12,"lineHeight":1.5,"fontStyle":"normal","fontWeight":"normal","textAlign":"center","textBaseline":"middle","background":""},"animateCycleIndex":0,"animatePos":0,"events":[],"eventFns":["link","doStartAnimate","doFn","doWindowFn","","doPauseAnimate","doStopAnimate"],"id":"8f951bb","name":"combine","tags":[],"lineDashOffset":0,"text":"","textOffsetX":0,"textOffsetY":0,"animateType":"","visible":true,"data":"","zRotate":0,"anchors":[{"x":210,"y":206,"direction":4},{"x":348.5,"y":153,"direction":1},{"x":487,"y":206,"direction":2},{"x":348.5,"y":259,"direction":3}],"rotatedAnchors":[{"x":210,"y":206,"direction":4},{"x":348.5,"y":153,"direction":1},{"x":487,"y":206,"direction":2},{"x":348.5,"y":259,"direction":3}],"animateDuration":0,"animateFrames":[],"animateFrame":0,"borderRadius":0,"iconSize":null,"imageAlign":"center","gradientAngle":0,"gradientRadius":0.01,"paddingTop":0,"paddingBottom":0,"paddingLeft":0,"paddingRight":0,"paddingLeftNum":0,"paddingRightNum":0,"paddingTopNum":0,"paddingBottomNum":0,"textRect":{"x":210,"y":232.5,"width":277,"height":26.5,"center":{"x":348.5,"y":245.75},"ex":487,"ey":259},"fullTextRect":{"x":210,"y":153,"width":277,"height":106,"center":{"x":348.5,"y":206},"ex":487,"ey":259},"iconRect":{"x":210,"y":153,"width":277,"height":79.5,"center":{"x":348.5,"y":192.75},"ex":487,"ey":232.5},"fullIconRect":{"x":210,"y":153,"width":277,"height":106,"center":{"x":348.5,"y":206},"ex":487,"ey":259},"elementRendered":false,"children":[{"type":0,"rect":{"x":210,"y":159,"width":100,"height":100,"center":{"x":260,"y":209},"ex":310,"ey":259},"lineWidth":1,"rotate":0,"offsetRotate":0,"globalAlpha":1,"dash":0,"strokeStyle":"#222222","fillStyle":"","font":{"color":"#222222","fontFamily":"\"Hiragino Sans GB\", \"Microsoft YaHei\", \"Helvetica Neue\", Helvetica, Arial","fontSize":12,"lineHeight":1.5,"fontStyle":"normal","fontWeight":"normal","textAlign":"center","textBaseline":"middle"},"animateCycleIndex":0,"animatePos":0,"events":[],"eventFns":["link","doStartAnimate","doFn","doWindowFn","","doPauseAnimate","doStopAnimate"],"TID":"116c9bc","id":"6c7977c","name":"circle","tags":[],"lineDashOffset":0,"text":"圆","textMaxLine":1,"textOffsetX":0,"textOffsetY":0,"animateType":"","visible":true,"data":"","zRotate":0,"anchors":[{"x":210,"y":209,"direction":4},{"x":260,"y":159,"direction":1},{"x":310,"y":209,"direction":2},{"x":260,"y":259,"direction":3},{"x":264.3577871373829,"y":258.8097349045873,"direction":0,"hidden":true},{"x":268.6824088833465,"y":258.2403876506104,"direction":0,"hidden":true},{"x":272.94095225512604,"y":257.2962913144534,"direction":0,"hidden":true},{"x":277.1010071662834,"y":255.98463103929544,"direction":0,"hidden":true},{"x":281.13091308703497,"y":254.3153893518325,"direction":0,"hidden":true},{"x":285,"y":252.30127018922195,"direction":0,"hidden":true},{"x":288.6788218175523,"y":249.9576022144496,"direction":0,"hidden":true},{"x":292.139380484327,"y":247.3022221559489,"direction":0,"hidden":true},{"x":295.3553390593274,"y":244.35533905932738,"direction":1,"hidden":true},{"x":298.3022221559489,"y":241.13938048432698,"direction":1,"hidden":true},{"x":300.9576022144496,"y":237.67882181755232,"direction":1,"hidden":true},{"x":303.30127018922195,"y":234,"direction":1,"hidden":true},{"x":305.3153893518325,"y":230.13091308703497,"direction":1,"hidden":true},{"x":306.98463103929544,"y":226.10100716628344,"direction":1,"hidden":true},{"x":308.2962913144534,"y":221.94095225512604,"direction":1,"hidden":true},{"x":309.2403876506104,"y":217.6824088833465,"direction":1,"hidden":true},{"x":309.8097349045873,"y":213.35778713738293,"direction":1,"hidden":true},{"x":309.8097349045873,"y":204.6422128626171,"direction":1,"hidden":true},{"x":309.2403876506104,"y":200.3175911166535,"direction":1,"hidden":true},{"x":308.2962913144534,"y":196.05904774487396,"direction":1,"hidden":true},{"x":306.98463103929544,"y":191.89899283371656,"direction":1,"hidden":true},{"x":305.3153893518325,"y":187.86908691296503,"direction":1,"hidden":true},{"x":303.30127018922195,"y":184,"direction":1,"hidden":true},{"x":300.9576022144496,"y":180.3211781824477,"direction":1,"hidden":true},{"x":298.3022221559489,"y":176.86061951567302,"direction":1,"hidden":true},{"x":295.3553390593274,"y":173.64466094067262,"direction":2,"hidden":true},{"x":292.139380484327,"y":170.6977778440511,"direction":2,"hidden":true},{"x":288.6788218175523,"y":168.0423977855504,"direction":2,"hidden":true},{"x":285,"y":165.69872981077805,"direction":2,"hidden":true},{"x":281.13091308703497,"y":163.6846106481675,"direction":2,"hidden":true},{"x":277.10100716628347,"y":162.0153689607046,"direction":2,"hidden":true},{"x":272.94095225512604,"y":160.7037086855466,"direction":2,"hidden":true},{"x":268.6824088833465,"y":159.7596123493896,"direction":2,"hidden":true},{"x":264.3577871373829,"y":159.1902650954127,"direction":2,"hidden":true},{"x":255.6422128626171,"y":159.1902650954127,"direction":2,"hidden":true},{"x":251.3175911166535,"y":159.7596123493896,"direction":2,"hidden":true},{"x":247.059047744874,"y":160.7037086855466,"direction":2,"hidden":true},{"x":242.89899283371656,"y":162.01536896070456,"direction":2,"hidden":true},{"x":238.86908691296503,"y":163.6846106481675,"direction":2,"hidden":true},{"x":235,"y":165.69872981077808,"direction":2,"hidden":true},{"x":231.3211781824477,"y":168.0423977855504,"direction":2,"hidden":true},{"x":227.86061951567302,"y":170.6977778440511,"direction":2,"hidden":true},{"x":224.64466094067262,"y":173.64466094067262,"direction":3,"hidden":true},{"x":221.6977778440511,"y":176.86061951567302,"direction":3,"hidden":true},{"x":219.0423977855504,"y":180.32117818244768,"direction":3,"hidden":true},{"x":216.69872981077808,"y":183.99999999999997,"direction":3,"hidden":true},{"x":214.6846106481675,"y":187.86908691296503,"direction":3,"hidden":true},{"x":213.0153689607046,"y":191.89899283371653,"direction":3,"hidden":true},{"x":211.7037086855466,"y":196.05904774487396,"direction":3,"hidden":true},{"x":210.7596123493896,"y":200.3175911166535,"direction":3,"hidden":true},{"x":210.1902650954127,"y":204.6422128626171,"direction":3,"hidden":true},{"x":210.1902650954127,"y":213.3577871373829,"direction":3,"hidden":true},{"x":210.75961234938958,"y":217.6824088833465,"direction":3,"hidden":true},{"x":211.7037086855466,"y":221.940952255126,"direction":3,"hidden":true},{"x":213.0153689607046,"y":226.10100716628344,"direction":3,"hidden":true},{"x":214.68461064816748,"y":230.13091308703494,"direction":3,"hidden":true},{"x":216.69872981077808,"y":234,"direction":3,"hidden":true},{"x":219.0423977855504,"y":237.67882181755232,"direction":3,"hidden":true},{"x":221.6977778440511,"y":241.13938048432698,"direction":3,"hidden":true},{"x":224.64466094067262,"y":244.35533905932738,"direction":4,"hidden":true},{"x":227.86061951567302,"y":247.3022221559489,"direction":4,"hidden":true},{"x":231.32117818244768,"y":249.9576022144496,"direction":4,"hidden":true},{"x":234.99999999999997,"y":252.30127018922192,"direction":4,"hidden":true},{"x":238.86908691296503,"y":254.3153893518325,"direction":4,"hidden":true},{"x":242.89899283371653,"y":255.9846310392954,"direction":4,"hidden":true},{"x":247.05904774487396,"y":257.2962913144534,"direction":4,"hidden":true},{"x":251.3175911166535,"y":258.2403876506104,"direction":4,"hidden":true},{"x":255.64221286261707,"y":258.8097349045873,"direction":4,"hidden":true}],"rotatedAnchors":[{"x":210,"y":209,"direction":4},{"x":260,"y":159,"direction":1},{"x":310,"y":209,"direction":2},{"x":260,"y":259,"direction":3},{"x":264.3577871373829,"y":258.8097349045873,"direction":0,"hidden":true},{"x":268.6824088833465,"y":258.2403876506104,"direction":0,"hidden":true},{"x":272.94095225512604,"y":257.2962913144534,"direction":0,"hidden":true},{"x":277.1010071662834,"y":255.98463103929544,"direction":0,"hidden":true},{"x":281.13091308703497,"y":254.3153893518325,"direction":0,"hidden":true},{"x":285,"y":252.30127018922195,"direction":0,"hidden":true},{"x":288.6788218175523,"y":249.9576022144496,"direction":0,"hidden":true},{"x":292.139380484327,"y":247.3022221559489,"direction":0,"hidden":true},{"x":295.3553390593274,"y":244.35533905932738,"direction":1,"hidden":true},{"x":298.3022221559489,"y":241.13938048432698,"direction":1,"hidden":true},{"x":300.9576022144496,"y":237.67882181755232,"direction":1,"hidden":true},{"x":303.30127018922195,"y":234,"direction":1,"hidden":true},{"x":305.3153893518325,"y":230.13091308703497,"direction":1,"hidden":true},{"x":306.98463103929544,"y":226.10100716628344,"direction":1,"hidden":true},{"x":308.2962913144534,"y":221.94095225512604,"direction":1,"hidden":true},{"x":309.2403876506104,"y":217.6824088833465,"direction":1,"hidden":true},{"x":309.8097349045873,"y":213.35778713738293,"direction":1,"hidden":true},{"x":309.8097349045873,"y":204.6422128626171,"direction":1,"hidden":true},{"x":309.2403876506104,"y":200.3175911166535,"direction":1,"hidden":true},{"x":308.2962913144534,"y":196.05904774487396,"direction":1,"hidden":true},{"x":306.98463103929544,"y":191.89899283371656,"direction":1,"hidden":true},{"x":305.3153893518325,"y":187.86908691296503,"direction":1,"hidden":true},{"x":303.30127018922195,"y":184,"direction":1,"hidden":true},{"x":300.9576022144496,"y":180.3211781824477,"direction":1,"hidden":true},{"x":298.3022221559489,"y":176.86061951567302,"direction":1,"hidden":true},{"x":295.3553390593274,"y":173.64466094067262,"direction":2,"hidden":true},{"x":292.139380484327,"y":170.6977778440511,"direction":2,"hidden":true},{"x":288.6788218175523,"y":168.0423977855504,"direction":2,"hidden":true},{"x":285,"y":165.69872981077805,"direction":2,"hidden":true},{"x":281.13091308703497,"y":163.6846106481675,"direction":2,"hidden":true},{"x":277.10100716628347,"y":162.0153689607046,"direction":2,"hidden":true},{"x":272.94095225512604,"y":160.7037086855466,"direction":2,"hidden":true},{"x":268.6824088833465,"y":159.7596123493896,"direction":2,"hidden":true},{"x":264.3577871373829,"y":159.1902650954127,"direction":2,"hidden":true},{"x":255.6422128626171,"y":159.1902650954127,"direction":2,"hidden":true},{"x":251.3175911166535,"y":159.7596123493896,"direction":2,"hidden":true},{"x":247.059047744874,"y":160.7037086855466,"direction":2,"hidden":true},{"x":242.89899283371656,"y":162.01536896070456,"direction":2,"hidden":true},{"x":238.86908691296503,"y":163.6846106481675,"direction":2,"hidden":true},{"x":235,"y":165.69872981077808,"direction":2,"hidden":true},{"x":231.3211781824477,"y":168.0423977855504,"direction":2,"hidden":true},{"x":227.86061951567302,"y":170.6977778440511,"direction":2,"hidden":true},{"x":224.64466094067262,"y":173.64466094067262,"direction":3,"hidden":true},{"x":221.6977778440511,"y":176.86061951567302,"direction":3,"hidden":true},{"x":219.0423977855504,"y":180.32117818244768,"direction":3,"hidden":true},{"x":216.69872981077808,"y":183.99999999999997,"direction":3,"hidden":true},{"x":214.6846106481675,"y":187.86908691296503,"direction":3,"hidden":true},{"x":213.0153689607046,"y":191.89899283371653,"direction":3,"hidden":true},{"x":211.7037086855466,"y":196.05904774487396,"direction":3,"hidden":true},{"x":210.7596123493896,"y":200.3175911166535,"direction":3,"hidden":true},{"x":210.1902650954127,"y":204.6422128626171,"direction":3,"hidden":true},{"x":210.1902650954127,"y":213.3577871373829,"direction":3,"hidden":true},{"x":210.75961234938958,"y":217.6824088833465,"direction":3,"hidden":true},{"x":211.7037086855466,"y":221.940952255126,"direction":3,"hidden":true},{"x":213.0153689607046,"y":226.10100716628344,"direction":3,"hidden":true},{"x":214.68461064816748,"y":230.13091308703494,"direction":3,"hidden":true},{"x":216.69872981077808,"y":234,"direction":3,"hidden":true},{"x":219.0423977855504,"y":237.67882181755232,"direction":3,"hidden":true},{"x":221.6977778440511,"y":241.13938048432698,"direction":3,"hidden":true},{"x":224.64466094067262,"y":244.35533905932738,"direction":4,"hidden":true},{"x":227.86061951567302,"y":247.3022221559489,"direction":4,"hidden":true},{"x":231.32117818244768,"y":249.9576022144496,"direction":4,"hidden":true},{"x":234.99999999999997,"y":252.30127018922192,"direction":4,"hidden":true},{"x":238.86908691296503,"y":254.3153893518325,"direction":4,"hidden":true},{"x":242.89899283371653,"y":255.9846310392954,"direction":4,"hidden":true},{"x":247.05904774487396,"y":257.2962913144534,"direction":4,"hidden":true},{"x":251.3175911166535,"y":258.2403876506104,"direction":4,"hidden":true},{"x":255.64221286261707,"y":258.8097349045873,"direction":4,"hidden":true}],"animateDuration":0,"animateFrames":[],"animateFrame":0,"borderRadius":0,"iconSize":null,"imageAlign":"center","gradientAngle":0,"gradientRadius":0.01,"paddingTop":0,"paddingBottom":0,"paddingLeft":0,"paddingRight":0,"paddingLeftNum":0,"paddingRightNum":0,"paddingTopNum":0,"paddingBottomNum":0,"textRect":{"x":235,"y":220.66666666666669,"width":50,"height":28.333333333333336,"center":{"x":260,"y":234.83333333333334},"ex":285,"ey":249.00000000000003},"fullTextRect":{"x":224.28571428571428,"y":173.28571428571428,"width":71.42857142857143,"height":71.42857142857143,"center":{"x":260,"y":209},"ex":295.7142857142857,"ey":244.71428571428572},"iconRect":{"x":235,"y":169,"width":50,"height":50,"center":{"x":260,"y":194},"ex":285,"ey":219},"elementRendered":false,"parentId":"8f951bb","rectInParent":{"x":"0%","y":"5.660377358490566%","width":"36.101083032490976%","height":"94.33962264150944%","rotate":0,"rect":{"x":210,"y":159,"width":100,"height":100,"center":{"x":260,"y":209},"ex":310,"ey":259}}},{"type":0,"rect":{"x":387,"y":153,"width":100,"height":100,"center":{"x":437,"y":203},"ex":487,"ey":253},"lineWidth":1,"rotate":0,"offsetRotate":0,"globalAlpha":1,"dash":0,"strokeStyle":"#222222","fillStyle":"","font":{"color":"#222222","fontFamily":"\"Hiragino Sans GB\", \"Microsoft YaHei\", \"Helvetica Neue\", Helvetica, Arial","fontSize":12,"lineHeight":1.5,"fontStyle":"normal","fontWeight":"normal","textAlign":"center","textBaseline":"middle"},"animateCycleIndex":0,"animatePos":0,"events":[],"eventFns":["link","doStartAnimate","doFn","doWindowFn","","doPauseAnimate","doStopAnimate"],"TID":"116c9bc","id":"30be325","name":"triangle","tags":[],"lineDashOffset":0,"text":"三角形","textOffsetX":0,"textOffsetY":0,"animateType":"","visible":true,"data":"","zRotate":0,"anchors":[{"x":437,"y":153,"direction":1},{"x":462,"y":203,"direction":2},{"x":437,"y":253,"direction":3},{"x":412,"y":203,"direction":4}],"rotatedAnchors":[{"x":437,"y":153,"direction":1},{"x":462,"y":203,"direction":2},{"x":437,"y":253,"direction":3},{"x":412,"y":203,"direction":4}],"animateDuration":0,"animateFrames":[],"animateFrame":0,"borderRadius":0,"iconSize":null,"imageAlign":"center","gradientAngle":0,"gradientRadius":0.01,"paddingTop":0,"paddingBottom":0,"paddingLeft":0,"paddingRight":0,"paddingLeftNum":0,"paddingRightNum":0,"paddingTopNum":0,"paddingBottomNum":0,"textRect":{"x":412,"y":219.66666666666669,"width":50,"height":28.333333333333336,"center":{"x":437,"y":233.83333333333334},"ex":462,"ey":248.00000000000003},"fullTextRect":{"x":412,"y":198,"width":50,"height":42.857142857142854,"center":{"x":437,"y":219.42857142857142},"ex":462,"ey":240.85714285714286},"iconRect":{"x":422.7142857142857,"y":181.57142857142858,"width":28.571428571428573,"height":28.571428571428573,"center":{"x":437,"y":195.85714285714286},"ex":451.2857142857143,"ey":210.14285714285717},"elementRendered":false,"parentId":"8f951bb","rectInParent":{"x":"63.898916967509024%","y":"0%","width":"36.101083032490976%","height":"94.33962264150944%","rotate":0,"rect":{"x":387,"y":153,"width":100,"height":100,"center":{"x":437,"y":203},"ex":487,"ey":253}}}]}
+  },
   {
     name: 'componentData内容为画布数据topology.toComponent函数执行结果',
     image: 'http://topology.le5le.com/assets/img/favicon.ico',
